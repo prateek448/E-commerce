@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/products/styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9b41bb52f7.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://sachinchoolur.github.io/lightslider/dist/js/lightslider.js"></script>
+</head>
+
+<body>
+
+</body>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href=""><i class="fas fa-cart-arrow-down"></i> ❗mart</a>
+
+  <div class="first">
+
+    <ul class="nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/profile"><i class="fas fa-home"></i> Home</a>
+      </li>
+
+
+      <li class="nav-item">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            More
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#"><i class="fas fa-user fanav"></i> <%= fname %></a>
+            <hr class="line">
+            <a class="dropdown-item" href="/ordersview"><i class="fas fa-tags fanav"></i> My Orders</a>
+            <hr class="line">
+            <a class="dropdown-item" href="/contact"><i class="fas fa-phone-alt fanav"></i> Contact Us</a>
+            <hr class="line">
+            <a class="dropdown-item" href="/logout"><i class="fas fa-power-off fanav"></i> Log Out</a>
+          </div>
+      <li class="nav-item">
+        <a class="nav-link" href="/cartview"><i class="fas fa-shopping-cart"></i> Cart</a>
+      </li>
+  </div>
+
+  <!-- <div class="sub-menu">
+            <ul>
+              <li><a class="link" href="/profile"><i class="fas fa-phone-alt fanav"></i> Contact Us</a>
+              </li>
+              <li><a class="link" href="/logout"><i class="fas fa-power-off fanav"></i> Log Out</a>
+              </li>
+            </ul>
+
+          </div> -->
+  </li>
+
+
+  </ul>
+  </div>
+</nav>
+
+<div class="low-above">
+  <div class="searchbox">
+    <input type="text" id="myinput" placeholder="Search for products." class="searchbox1" onkeyup="search()">
+  </div>
+  <div class="low" id="low">
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <% var i=0 %>
+        <% products.forEach((product,index)=>{%>
+
+        <%i+=1 %>
+        <% if(i<=3){ %>
+        <div class="carousel-item
+       <% if(index==0){ %>
+         active
+         <%}%>">
+
+        <h5><%= product.name %></h5>
+        <a href=" /login/buy?id=<%= product._id %>">
+          <img src="/images/<%= product.image %>" class="img1" alt="1">
+          </a>
+          <div class="carousel-caption">
+            <h5></h5>
+            <h5></h5>
+
+          </div>
+        </div>
+        <% } %>
+        <%})%>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="outline">
+
+    <div class="fashion">
+      <h3 class="head3">Fashion</h3>
+      <div class="row" id="myul">
+
+        <% var i=0 %>
+        <% products.forEach((product,index)=>{%>
+        <% if(product.category=="fashion"){%>
+        <%i+=1 %>
+        <% if(i>1 && i<=7){ %>
+
+        <div class="col-lg-2 col-6 col-md-4" id="<%=product.name %>">
+
+          <a href="/login/buy?id=<%= product._id %>" class="anchor">
+            <img src="/images/<%= product.image %>" class="fash-product" alt="">
+
+            <p class="productname"><b><%= product.name %></b></p>
+            <p class="price">₹<%= product.price %></p>
+            <p class="description"><%= product.description %></p>
+          </a>
+        </div>
+
+        <% } %>
+        <% } %>
+        <%})%>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <% products.forEach((product,index)=>{%>
+  <% if(product.category=="banner"){%>
+  <div class="banner" id="banner">
+
+    <a href="/login/buy?id=<%= product._id %>">
+      <img src="/images/Photo Banner Facebook Cover Photo.png" class="banner1" alt="">
+    </a>
+  </div>
+  <% } %>
+  <%})%>
+  <div class="fashion">
+    <h3 class="head3">Electronics</h3>
+    <div class="row" id="myul1">
+      <% var i=0 %>
+      <% products.forEach((product,index)=>{%>
+      <% if(product.category=="electronics"){%>
+      <%i+=1 %>
+      <% if(i<=6){ %>
+      <div class="col-lg-2 col-6 col-md-4" id="<%= product.name%>">
+
+        <a href="/login/buy?id=<%= product._id %>" class="anchor">
+          <img src="/images/<%= product.image %>" class="fash-product" alt="">
+
+          <p class="productname"><b><%= product.name %></b></p>
+          <p class="price">₹<%= product.price %></p>
+          <p class="description"><%= product.description %></p>
+        </a>
+      </div>
+      <% } %>
+      <% } %>
+      <%})%>
+    </div>
+  </div>
+</div>
+
+    <script>
+      function search() {
+        let filter = document.getElementById('myinput').value.toUpperCase();
+        let ul = document.getElementById('myul');
+        let pi = ul.getElementsByClassName('productname');
+        document.getElementById('low').style.display = "none";
+        document.getElementById('banner').style.display = "none";
+        let ul1 = document.getElementById('myul1');
+        let pi1 = ul1.getElementsByClassName('productname');
+        for (var i = 0; i < pi.length; i++) {
+          let a = pi[i];
+          let textvalue = a.textContent || a.innerHTML;
+          if (textvalue.toUpperCase().indexOf(filter) > -1) {
+            document.getElementById(textvalue).style.display = "";
+
+          } else {
+            document.getElementById(textvalue).style.display = "none";
+          }
+        }
+        for (var i = 0; i < pi1.length; i++) {
+          let a = pi1[i];
+          let textvalue = a.textContent || a.innerHTML;
+          if (textvalue.toUpperCase().indexOf(filter) > -1) {
+            document.getElementById(textvalue).style.display = "";
+
+          } else {
+            document.getElementById(textvalue).style.display = "none";
+          }
+        }
+      }
+
+
+
+    </script>
+    <div class="end">
+      <h3>Find the best products.</h3>
+
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+
+      <p>
+        ©Copyright 2020 imart
+      </p>
+    </div>
+</html>

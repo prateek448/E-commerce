@@ -1,0 +1,96 @@
+p{
+  font-size: 1.1em;
+}
+.nav-link{
+  color: white;
+  margin: 0 20px;
+}
+.nav{
+  margin: 0 60px;
+}
+.navbar-brand{
+  margin: 0 70px;
+}
+
+.dropdown-menu{
+  background-color: #222831;
+}
+.dropdown-item{
+  color: white;
+}
+.line{
+  background-color: white;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+.mo{
+  background-color: white;
+  padding: 1%;
+  margin: 0 2% 0 2%;;
+}
+.end{
+  padding: 5% 6% 2%;
+  text-align: center;
+  background-color: #222831;
+  color: white;
+}
+.fab{
+  padding: 1% 1%;
+}
+.main{
+  background-color: #cfd3ce;
+padding-top: 1%;
+}
+.main1{
+  height: 600px;
+  width:500px;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+}
+.price{
+  color: green;
+}
+.description{
+  color: grey;
+}
+.status{
+  color: red;
+}
+.border{
+  padding: 1%;
+}
+.image{
+  padding: 2%;
+  width: 50%;
+}
+.prddetails{
+  text-align: left;
+  padding-left: 10%
+}
+.prddetails1{
+  text-align: left;
+  position:relative;
+  left: 17%;
+}
+.empty{
+  text-align: center;
+}
+.emptyhead{
+  padding-top: 2%;
+  font-family: 'Castoro', serif;
+}
+.head3{
+  text-align: left;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  padding-left: 0.5%;
+}
+.emptyimage{
+  padding: 2% 0;
+  width: 24%;
+}
+.btn1{
+  padding-right: 25%;
+  text-align:right;
+}

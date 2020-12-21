@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  box-sizing: border-box;
+}
+.main{
+  background: #f1f1f1;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-link{
+  color: white;
+  margin: 0 20px;
+}
+.nav{
+  margin: 0 60px;
+}
+.navbar-brand{
+  margin: 0 70px;
+}
+
+.dropdown-menu{
+  background-color: #222831;
+}
+.dropdown-item{
+  color: white;
+}
+.line{
+  background-color: white;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+.end{
+  padding: 5% 6% 2%;
+  text-align: center;
+  background-color: #222831;
+  color: white;
+}
+.fab{
+  padding: 1% 1%;
+}
+.contact-info{
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+.card1{
+  background: #2f3542;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-icon1{
+  font-size: 28px;
+  background: #ff6348;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card1:hover .card-icon1{
+  background: none;
+  color: #ff6348;
+  transform: scale(1.6);
+}
+
+.card1 p{
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.card1:hover p{
+  max-height: 40px;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:800px) {
+  .contact-info{
+    flex-direction: column;
+  }
+  .card1{
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}

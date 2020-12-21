@@ -1,0 +1,100 @@
+h5{
+  padding: 10px 0;
+}
+.back{
+  background-color: grey;
+  align: center;
+}
+.nav-link{
+  color: white;
+  margin: 0 20px;
+}
+.nav{
+  margin: 0 60px;
+}
+.navbar-brand{
+  margin: 0 70px;
+}
+.fanav{
+  font-size: 0.7em;
+}
+.dropdown-menu{
+  background-color: #222831;
+}
+.dropdown-item{
+  color: white;
+}
+.end{
+  padding: 5% 6% 2%;
+  text-align: center;
+  background-color: #222831;
+  color: white;
+}
+.fab{
+  padding: 1% 1%;
+}
+.main{
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  background-color: white;
+}
+.image1{
+  padding: 3% 0 2% 0;
+  width:25%;
+}
+.delivery{
+  padding: 1px;
+  margin: 0 10px;
+  box-sizing:content-box;
+  color: white;
+  background-color: #30475e;
+  border-radius: 6px;
+}
+.text{
+  text-align: left;
+
+}
+button{
+  padding: 20px 0 ;
+}
+.checkout{
+  padding: 3% 0;
+}
+.column{
+  padding-left: 31%;
+}
+.column1{
+  padding-left: 0;
+}
+@media (max-width: 900px) {
+  .text{
+    text-align: left;
+
+    padding-left: 0;
+  }
+  h5{
+    font-size: 1.1em;
+    padding: 10% 0;
+  }
+  .column{
+    padding-left: 0;
+  }
+  .col{
+    padding: 5% 0;
+  }
+
+.image1{
+  width: 40%;
+}
+.nav-link{
+
+  margin: 0 ;
+}
+.nav{
+  margin: 0;
+}
+.navbar-brand{
+  margin: 0;
+}
+}

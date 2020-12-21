@@ -1,0 +1,179 @@
+body{
+  margin: 0;
+
+}
+a{
+  text-decoration: none;
+}
+p{
+  margin-block-start: 0.5em;
+margin-block-end: 0.5em;
+}
+.line{
+  background-color: white;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+.nav-link{
+  color: white;
+  margin: 0 20px;
+}
+.nav{
+  margin: 0 60px;
+}
+.navbar-brand{
+  margin: 0 70px;
+}
+.fanav{
+  font-size: 0.7em;
+}
+.dropdown-menu{
+  background-color: #222831;
+}
+.dropdown-item{
+  color: white;
+}
+.empty{
+  text-align: center;
+  background-color: white;
+}
+.main{
+  background-color: #cfd3ce;
+  padding: 1% 5%;
+}
+.emptyhead{
+  font-family: 'Castoro', serif;
+}
+.head3{
+  text-align: left;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  padding-left: 0.5%;
+}
+.emptyimage{
+  padding: 2% 0;
+  width: 24%;
+}
+.btn1{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.shop{
+  padding: 1% 0 2% 0;
+}
+.end{
+  padding: 5% 6% 2%;
+  text-align: center;
+  background-color: #222831;
+  color: white;
+}
+.fab{
+  padding: 1% 1%;
+}
+.items{
+
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  background: #fff;
+  padding: 5px;
+
+}
+.items1{
+
+  width: 100%;
+  height: 400px;
+  position: relative;
+  margin: auto;
+  background: #fff;
+  padding: 1%;
+
+}
+.main1{
+  padding:0.5% 0;
+}
+.delete{
+  text-align: right;
+}
+.headcart{
+  background: #fff;
+  padding: 1% 1%;
+  width: 100%;
+  margin: auto;
+}
+.cartimg{
+  margin: auto;
+  width:90%;
+  padding-bottom: 1%;
+}
+.delivery{
+  margin: auto;
+}
+.remove{
+  text-align: right;
+}
+.mrp{
+  text-decoration: line-through;
+  color: grey;
+  padding-left: 2%;
+}
+.line{
+  color: grey;
+}
+.heading{
+  padding-left: 2%;
+}
+.discper{
+  color: green;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+.discper1{
+  color: green;
+}
+.price{
+  padding: 3%;
+  font-weight:normal;
+}
+.right{
+  padding-left: 40%;
+}
+.amt{
+  padding: 7% 3% 3% 3%;
+}
+.checkout{
+  padding: 2%;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .banner1{
+    width: 100%;
+
+  }
+  .img1{
+    width: 30%;
+  }
+
+.nav-link{
+
+  margin: 0 ;
+}
+.nav{
+  margin: 0;
+}
+.navbar-brand{
+  margin: 0;
+}
+.emptyimage{
+  width:40%;
+  padding: 3% 0;
+}
+.emptyhead{
+  padding-top: 2%;
+}
+.shop{
+  padding-bottom:5%;
+
+}
+}

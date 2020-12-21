@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b41bb52f7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/cart/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href=""><i class="fas fa-cart-arrow-down"></i> ❗mart</a>
+      <div class="first">
+
+        <ul class="nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/profile"><i class="fas fa-home"></i> Home</a>
+          </li>
+
+
+          <li class="nav-item">
+            <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      More
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#"><i class="fas fa-user fanav"></i> <%= fname %></a>
+      <hr class="line">
+      <a class="dropdown-item" href="/ordersview"><i class="fas fa-tags fanav"></i> My Orders</a>
+      <hr class="line">
+      <a class="dropdown-item" href="/contact"><i class="fas fa-phone-alt fanav"></i> Contact Us</a>
+      <hr class="line">
+      <a class="dropdown-item" href="/logout"><i class="fas fa-power-off fanav"></i> Log Out</a>
+    </div>
+    <li class="nav-item">
+      <a class="nav-link" href="/products"><i class="fas fa-shopping-bag"></i> Products</a>
+    </li>
+  </div>
+</li>
+
+
+</ul>
+</div>
+</nav>
+<div class="main">
+
+<div>
+    <%var j=0; var price=0; var mrp=0; var discount= 0; var discountper=0; var productids=[];%>
+    <% if(!buydetails){%>
+      <div class="empty">
+        <h3 class="head3">My Cart</h3>
+      <h5 class="emptyhead">It's so lonely in here.😒</h5>
+      <img class="emptyimage" src="/images/d438a32e-765a-4d8b-b4a6-520b560971e8.png" alt="">
+      <h5>Your cart is empty.</h5>
+      <p>Add items to it now.</p>
+      <div class="shop">
+      <a href="/products">
+        <button type="button" class="btn btn-primary btn1" name="button">Shop Now</button>
+      </a>
+      </div>
+      </div>
+<%} else{%>
+  <div class="row">
+    <div class="col col-lg-8">
+    <% buydetails.forEach((product,i)=>{ %>
+    <% j+=1 %>
+    <% price = Number(price) + Number(product.price) %>
+    <% mrp = Number(mrp) + Number(product.mrp) %>
+    <% discount=Math.trunc(Number(price)-Number(mrp))%>
+    <% discountper=(Number(price)*100)/Number(mrp) %>
+    <% productids.push(product._id)%>
+    <%if(j===1){%>
+
+
+
+    <div class="headcart">
+
+
+        <h5 class="heading">My Cart</h5>
+        </div>
+
+<%}%>
+    <div id="<%= product._id %>">
+      <div class="main1">
+      <div class="items row">
+        <div class="col col-lg-3">
+          <img src="/images/<%=product.image%>" class="cartimg"alt="">
+        </div>
+        <div class="col col-lg-8">
+
+
+        <span>
+<h4><%= product.brandname %></h4>
+        <p><b>
+          <%= product.name %>  </b>
+        <span class="delivery">(Delivery in 4-5 days)</span></p>
+        <p><%=product.description%></p>
+        <h5>₹<%= product.price %><span class="mrp">₹<%=product.mrp%></span></h5>
+<div class="remove">
+      <button type="button" name="button" class="btn btn-danger" onclick="delcartitem('<%= product._id %>','<%=j%>')">Remove <i class="fas fa-trash"></i></button>
+</div>
+</span>
+
+      </div>
+      </div>
+      </div>
+      </div>
+
+<%})%>
+</div>
+<%if(j>0){%>
+<div class="items1 col-lg-4">
+  <h5 class="heading">Price Details</h5>
+  <hr class="line">
+  <h5 class="price">Price (<%=j%> items) - <span class="right">₹<%=mrp%></span></h5>
+  <h5 class="price">Discount -<span class="right discper1"><%= discount %> <span class="discper"> <%= Math.trunc(100-discountper) %>% off</span></span></h5>
+
+<h5 class="amt">Total Amount - <span class="right">₹<%=price%></span></h5>
+<h5><span class="price"><b>Delivery address</b> - <%= address %> </span></h5>
+<div class="checkout">
+<button type="button" class="btn btn-success btn-lg" name="button" onclick="
+orders('<%= productids %>') <%= console.log(productids)%>">Check Out <i class="fas fa-shopping-basket"></i></button>
+</div>
+</div>
+<%}%>
+</div>
+
+<%if(j===0){%>
+  <div class="empty" id='empty'>
+    <h3 class="head3">My Cart</h3>
+  <h5 class="emptyhead">It's so lonely in here.😒</h5>
+  <img class="emptyimage" src="/images/d438a32e-765a-4d8b-b4a6-520b560971e8.png" alt="">
+  <h5>Your cart is empty.</h5>
+  <p>Add items to it now.</p>
+  <div class="shop">
+  <a href="/products">
+    <button type="button" class="btn btn-primary btn1" name="button">Shop Now</button>
+  </a>
+  </div>
+  </div>
+<%}%>
+<%}%>
+</div>
+</div>
+<div class="end">
+  <h3>Find the best products.</h3>
+
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-instagram"></i>
+
+  <p>
+    ©Copyright 2020 imart
+  </p>
+<script>
+  function delcartitem(id,j){
+    alert("Are you sure?");
+    $.post("/delcartitem",{
+      "id":id
+    },(data,status)=>{
+      console.log(data);
+      location.reload()
+    });
+    var elem = document.getElementById(id);
+    elem.remove(elem);
+  };
+  function orders(id){
+
+    $.post("/orders",{
+      "id":id
+    },(data,status)=>{
+      console.log(data);
+      window.location.href="/ordersview";
+    });
+
+  }
+</script>
+  </body>
+</html>

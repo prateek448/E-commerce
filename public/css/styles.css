@@ -1,0 +1,140 @@
+body{
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.head33{
+  text-align: center;
+  padding: 2%;
+  color: #fff;
+}
+h5{
+  color: #000;
+}
+
+#title,.low
+{
+  background-color: #709fb0;
+}
+.title1
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  padding: 8% 1%;
+}
+
+.head1
+{
+  margin: 20px 0 20px 20px;
+}
+.line
+{
+  border: dotted #00587a 6px;
+  border-bottom: none;
+  width: 4%;
+
+}
+.bott
+{
+  align-items: center;
+display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.nav-item
+{
+  padding: 0 15px;
+}
+.nav-link{
+  color: #fff;
+
+}
+.nav{
+  margin: 0 60px;
+}
+.navbar-brand{
+  margin: 0 70px;
+}
+
+.dropdown-menu{
+  background-color: #222831;
+}
+.dropdown-item{
+  color: grey;
+}
+.mid{
+  padding: 5% 2%;
+}
+.dot{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+  width: 70%;
+}
+.mid1{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.img3{
+  margin: 3% 0;
+}
+.af{
+  font-size: 4rem;
+  color: #00587a;
+}
+.af:hover{
+color: #0f3057;
+}
+
+
+
+.img1
+{width: 20%;
+  border-radius: 100%;
+}
+.carousel-item
+{
+  text-align: center;
+}
+.carousel-caption{
+  margin-top: 3%;
+}
+.carousel-item{
+  padding: 5% 10%;
+}
+.row{
+  margin: 0;
+}
+.col{
+  margin: 0;
+}
+.featured{
+  font-family: 'Montserrat', sans-serif;
+text-align: center;
+  padding: 2% 2% 0 2%;
+}
+@media (max-width: 900px) {
+.img2{width:103.2%;
+  margin: 0;
+  position:relative;
+  right: 1.6%;
+
+  }
+
+}
+.end{
+  padding: 5% 6% 2%;
+  text-align: center;
+}
+.fab{
+  padding: 1% 1%;
+}
+.head3{
+  color: #00587a;
+}
+.link{
+  color: white;
+}

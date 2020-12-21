@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/9b41bb52f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+
+
+        <button type="button" class="toggle-btn" onclick=login()>Log in</button>
+        <button type="button" class="toggle-btn" onclick=signup()>Sign in</button>
+
+      </div>
+      <p>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </p>
+      <form id="login" class="input-group">
+        <input type="text" class="input-field" placeholder="Email-id" required>
+        <input type="text" class="input-field" placeholder="Password" required>
+        <button type="submit" class="submit-btn">Log In</button>
+
+      </form>
+      <form id="signup" class="input-group">
+       <input type="text" class="input-field" placeholder="Full name" required>
+        <input type="text" class="input-field" placeholder="Email-id" required>
+
+        <input type="text" class="input-field" placeholder="Password" required>
+        <button type="submit" class="submit-btn">Sign up</button>
+
+      </form>
+    </div>
+  </div>
+<script>
+  var x=document.getElementById('login');
+    var y=document.getElementById('signup');
+      var z=document.getElementById('btn');
+      function signup(){
+        x.style.left="-400px";
+        y.style.left="50px";
+        z.style.left="110px";
+      }
+      function login(){
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0";
+      }
+</script>
+</body>
+
+</html>
