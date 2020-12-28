@@ -290,7 +290,7 @@ app.get("/contact", function(req,res){
 
   res.render("contact.ejs",{emailid:valid.email,fname: valid.fname});
 })
-  app.listen(3000, function() {
+  app.listen(process.env.PORT || 3000, function() {
     console.log("server has started on 3000 port");
   });
 });
